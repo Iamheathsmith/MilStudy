@@ -19,6 +19,9 @@ function initMap() {
         lng: position.coords.longitude
       };
 
+      var marker = new google.maps.Marker({position: pos}); //this puts a marker down
+      marker.setMap(map); // along with this too.
+
       infoWindow.setPosition(pos);
       infoWindow.setContent('Location found.');
       infoWindow.open(map);
@@ -39,35 +42,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
-
-
-
-
-var searchBox = new google.maps.places.SearchBox(document.getElementById('pac-input'));
-   map.controls[google.maps.ControlPosition.TOP_CENTER].push(document.getElementById('pac-input'));
-   google.maps.event.addListener(searchBox, 'places_changed', function() {
-     searchBox.set('map', null);
-
-
-     var places = searchBox.getPlaces();
-
-     var bounds = new google.maps.LatLngBounds();
-     var i, place;
-     for (i = 0; place = places[i]; i++) {
-       (function(place) {
-         var marker = new google.maps.Marker({
-
-           position: place.geometry.location
-         });
-         marker.bindTo('map', searchBox, 'map');
-         google.maps.event.addListener(marker, 'map_changed', function() {
-           if (!this.getMap()) {
-             this.unbindAll();
-           }
-         });
-         bounds.extend(place.geometry.location);
-
-
-       }(place));
-
-     }
