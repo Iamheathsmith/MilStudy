@@ -1,1 +1,101 @@
 /* app styles */
+
+main {
+  width: 960px;
+}
+
+body {
+  width: 960px;
+  margin-left: calc(50% - 480px);
+  outline: 1px dashed black;
+}
+
+.logo {
+  color: red;
+  font-size: 40px;
+  font-family: helvetica;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  width: 600px;
+  float: left;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+.post {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.left_sideBar {
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+}
