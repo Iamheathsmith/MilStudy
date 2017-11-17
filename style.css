@@ -83,6 +83,14 @@ body {
   display: block;
 }
 
+h2 {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Hind', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .content {
   width: 560px;
   float: left;
@@ -127,4 +135,10 @@ h3 {
 
 .left_sideBar img {
   margin-top: 10px;
+}
+
+#map {
+   height: 500px;
+   width: auto;
+   margin: 0 auto;
 }
